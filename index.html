@@ -7,16 +7,55 @@
     <!-- Taliwind & DaisyUI CDN -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.9/daisyui.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Google-Font CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    },
+                    fontFamily: {
+                        roboto: ['Roboto', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
 </head>
-<body>
-    <header>
-
-    </header>
-    <main>
-
-    </main>
-    <footer>
-
-    </footer>
+<body class="bg-slate-800 ">
+       <section class="max-w-md min-h-screen mx-auto py-6 bg-[#F4F5F7] ">
+        <h1 class="mt-5 text-2xl text-[#0874F2] font-bold px-2 font-roboto"> Payoo Secure Login</h1>
+        <h2 class="text-center mt-2 text-[#FF6600] text-xl font-roboto">আপনার আস্থার ঠিকানা, পেও ব্যাংক...!!</h2>
+        <nav class="flex justify-center items-center mt-10">
+            <div class="relative  flex justify-center items-center mb-10 w-9/12">
+                <img class="w-60 absolute -top-3" src="images/bg.png" alt="">
+                <img class="w-16" src="images/Group.png" alt="">
+            </div>
+        </nav>
+        <section>
+            <div class="">
+                <div class="hero-content flex-col lg:flex-row-reverse">
+                  <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    <div class="card-body">
+                      <fieldset class="fieldset">
+                        <label class="fieldset-label font-bold">Mobile Number</label>
+                        <input id="login-account-number" type="text" class="input border-none bg-[#F4F5F7] rounded-full focus:outline-[#0874F2]" placeholder="Enter your number" />
+                        <label class="fieldset-label font-bold">Enter Your PIN</label>
+                        <input id="login-account-pin" type="text" class="input border-none bg-[#F4F5F7] rounded-full focus:outline-[#0874F2]" placeholder="Enter 4 Digit Pin" />
+                        <div><a class="link link-hover">Forgot PIN?</a></div>
+                        <button id="login-btn" class="btn btn-neutral mt-4 text-white bg-[#0874F2] border-none rounded-full">Login</button>
+                      </fieldset>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </section>
+       </section>
+       <script src="script/login.js"></script>
 </body>
 </html>
